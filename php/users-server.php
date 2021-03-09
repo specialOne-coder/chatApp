@@ -8,7 +8,7 @@
   $sql->execute();
   $reponse = "";
   $rowC = $sql->rowCount();
-  if($rowC == 1){
+  if($rowC == 0){
      $reponse .= "Aucun utilisateur ";
   }elseif($rowC > 0){
      include_once "data.php";
