@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : mar. 09 mars 2021 à 13:00
+-- Généré le : mar. 09 mars 2021 à 13:16
 -- Version du serveur :  10.4.13-MariaDB
 -- Version de PHP : 7.4.7
 
@@ -33,30 +33,8 @@ CREATE TABLE `messages` (
   `msg_id` int(11) NOT NULL,
   `msg_entrant_id` int(255) NOT NULL,
   `msg_sortant_id` int(255) NOT NULL,
-  `msg` varchar(1000) NOT NULL,
-  `test1` int(11) NOT NULL DEFAULT 1,
-  `test2` int(11) NOT NULL DEFAULT 2,
-  `test3` int(11) NOT NULL DEFAULT 3,
-  `test4` int(11) NOT NULL DEFAULT 4
+  `msg` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Déchargement des données de la table `messages`
---
-
-INSERT INTO `messages` (`msg_id`, `msg_entrant_id`, `msg_sortant_id`, `msg`, `test1`, `test2`, `test3`, `test4`) VALUES
-(1, 125595462, 926800929, 'Anh brozi Ébi', 1, 2, 3, 4),
-(2, 926800929, 125595462, 'plan', 1, 2, 3, 4),
-(3, 125595462, 926800929, 'Tu fais quoi ?', 1, 2, 3, 4),
-(4, 926800929, 125595462, 'rien et toi ?', 1, 2, 3, 4),
-(5, 125595462, 926800929, 'Idem ', 1, 2, 3, 4),
-(6, 125595462, 926800929, 'Tu reviens?', 1, 2, 3, 4),
-(7, 125595462, 926800929, 'Oui ?', 1, 2, 3, 4),
-(8, 926800929, 125595462, 'pas encore bro', 1, 2, 3, 4),
-(9, 125595462, 926800929, 'Mais ça nous plairait beaucoup ', 1, 2, 3, 4),
-(10, 926800929, 125595462, 'oui loo', 1, 2, 3, 4),
-(11, 125595462, 926800929, 'Ok', 1, 2, 3, 4),
-(12, 125595462, 926800929, 'Oooh', 1, 2, 3, 4);
 
 -- --------------------------------------------------------
 
@@ -74,18 +52,6 @@ CREATE TABLE `users` (
   `image` varchar(400) NOT NULL,
   `status` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Déchargement des données de la table `users`
---
-
-INSERT INTO `users` (`user_id`, `unique_id`, `nom`, `prenom`, `email`, `password`, `image`, `status`) VALUES
-(1, 926800929, 'At', 'ferdinand', 'frd@gmail.com', '8918', '1615096541ia.png', 'Offline'),
-(2, 125595462, 'Avoyi', 'parfait', 'paf@gmail.com', '8918', '1615096640uyav3xutzkdkngj2idiz.png', 'Offline'),
-(3, 1161651285, 'Kpoblam', 'fabrice', 'pourmespeches@gmail.com', '8918', '1615098791blogo.png', 'En ligne'),
-(4, 765767696, 'Bossa', 'Ko', 'boss@gmail.com', 'bossa', '16151432369C66AA4B-DE45-41E1-B951-D071CB7BC9EA.png', 'Offline'),
-(5, 754467234, 'test', 'tes', 'sodji@gmail.com', '8918', '1615173884seknow.jpg', 'Offline'),
-(6, 749841226, 'ok', 'mipos', 'ok@gmail.com', '8918', '1615176892grut.jpg', 'Offline');
 
 --
 -- Index pour les tables déchargées
@@ -111,13 +77,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `msg_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `msg_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
